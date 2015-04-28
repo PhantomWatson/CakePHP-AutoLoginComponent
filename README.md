@@ -23,17 +23,13 @@ Configuration:
 This component takes the following options:
 
 **autoLogin** - Default: `true`
-
 If true, attempts to logs the user in with cookie data.
 
 **cookieKey** - Default: `'autoLogin'`
-
 The name of the variable that the user's AutoLogin data is placed under in the cookie.
 
 **cookieSettings** - Default: `[]`
-
 An array of [cookie configuration settings](http://book.cakephp.org/3.0/en/controllers/components/cookie.html#configuring-cookies) for overriding the existing cookie configuration for the AutoLogin cookie variable. Possible options: 'expires', 'path', 'domain', 'secure', 'key', 'httpOnly', and 'encryption'.
 
 **fields** - Default: `['email', 'username', 'password']`
-
 The field names relevant to user authentication in your application. If your password field is called `'pass'`, you'll need to change this to something like `['username', 'pass']`.
