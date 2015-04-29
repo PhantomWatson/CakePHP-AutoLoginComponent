@@ -1,0 +1,27 @@
+{
+	"name": "PhantomWatson/CakePHP-AutoLoginComponent",
+	"description": "CakePHP AutoLogin Component",
+	"type": "cakephp-plugin",
+	"keywords": ["cakephp", "autologin"],
+	"homepage": "https://github.com/PhantomWatson/CakePHP-AutoLoginComponent",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Graham Watson",
+			"homepage": "http://phantomwatson.com",
+			"role": "Author"
+		},
+	],
+	"support": {
+		"issues": "https://github.com/PhantomWatson/CakePHP-AutoLoginComponent/issues",
+		"source": "https://github.com/PhantomWatson/CakePHP-AutoLoginComponent"
+	},
+	"require": {
+		"cakephp/cakephp": "3.0.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"AutoLogin\\": "src",
+		}
+	}
+}
