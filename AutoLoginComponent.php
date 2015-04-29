@@ -30,10 +30,6 @@ class AutoLoginComponent extends Component {
     {
         parent::initialize([]);
         $this->configureCookie();
-    }
-
-    public function startup(\Cake\Event\Event $event)
-    {
         if ($this->config('autoLogin') == true && ! $this->Auth->user()) {
             $this->restoreLoginFromCookie();
         }

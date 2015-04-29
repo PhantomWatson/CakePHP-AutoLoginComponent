@@ -28,3 +28,5 @@ This component takes the following options:
  - **fields** - The field names relevant to user authentication in your application. If your password field is called `'pass'`, you'll need to change this to something like `['username', 'pass']`. (Default: `['email', 'username', 'password']`)
 
 For information about how to set these options, visit the [Configuring Components](http://book.cakephp.org/3.0/en/controllers/components.html#configuring-components) section of the CakePHP 3 docs.
+
+Note that these settings **must be set in your controller's `initialize()` method**, because AutoLogin cookie configuration and session restoration both take place before your controller's `beforeFilter()` method fires.
