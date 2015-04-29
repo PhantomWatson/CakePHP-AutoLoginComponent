@@ -1,5 +1,5 @@
 {
-	"name": "PhantomWatson/CakePHP-AutoLoginComponent",
+	"name": "phantom-watson/cake-php-auto-login-component",
 	"description": "CakePHP AutoLogin Component",
 	"type": "cakephp-plugin",
 	"keywords": ["cakephp", "autologin"],
