@@ -10,7 +10,7 @@
 			"name": "Graham Watson",
 			"homepage": "http://phantomwatson.com",
 			"role": "Author"
-		},
+		}
 	],
 	"support": {
 		"issues": "https://github.com/PhantomWatson/CakePHP-AutoLoginComponent/issues",
