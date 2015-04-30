@@ -9,12 +9,22 @@ Compatibility:
 Tested in CakePHP 3.0.0. This component will not work with CakePHP versions 1.x or 2.x.
 
 Installation:
--------------
+--------------------
 
- - Add `AutoLoginComponent.php` to the directory `src/Controller/Component`
- - Add `$this->loadComponent('AutoLogin');` to `AppController::initialize()`
+**Manual installation:**
+
+ - Download this repository and add its contents to `plugins/AutoLogin`
+
+**Or with Composer:**
+
+ - Run `composer require phantomwatson/cakephp-autologin` in your application root
+
+**Then:**
+
+ - Add `Plugin::load('AutoLogin');` to your application's `bootstrap.php` (unless if you're already using `Plugin::loadAll();`)
+ - Add `$this->loadComponent('AutoLogin.AutoLogin');` to `AppController::initialize()`
  - Add `$this->AutoLogin->setCookie();` after `$this->Auth->setUser($user);` wherever you log your users in
- - Add `$this->AutoLogin->destroyCookie();` where you log your users out
+ - Add `$this->AutoLogin->destroyCookie();` where you log your users out (e.g. in `UsersController::logout()`)
  - It is **strongly recommended** that you use encrypted cookies. CakePHP 3 uses AES-encrypted cookies by default.
 
 Configuration:
