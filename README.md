@@ -25,7 +25,6 @@ Installation:
  - Add `$this->loadComponent('AutoLogin.AutoLogin');` to `AppController::initialize()`
  - Add `$this->AutoLogin->setCookie();` after `$this->Auth->setUser($user);` wherever you log your users in
  - Add `$this->AutoLogin->destroyCookie();` where you log your users out (e.g. in `UsersController::logout()`)
- - It is **strongly recommended** that you use encrypted cookies. CakePHP 3 uses AES-encrypted cookies by default.
 
 Configuration:
 --------------
@@ -40,3 +39,8 @@ This component takes the following options:
 For information about how to set these options, visit the [Configuring Components](http://book.cakephp.org/3.0/en/controllers/components.html#configuring-components) section of the CakePHP 3 docs.
 
 Note that these settings **must be set in your controller's `initialize()` method**, because AutoLogin cookie configuration and session restoration both take place before your controller's `beforeFilter()` method fires.
+
+Notes:
+------
+
+It is **strongly recommended** that you use encrypted cookies. CakePHP 3 uses AES-encrypted cookies by default, so this just means *don't turn off cookie encryption*.
