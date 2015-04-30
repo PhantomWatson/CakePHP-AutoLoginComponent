@@ -6,7 +6,7 @@
  * @link https://github.com/PhantomWatson/CakePHP-AutoLoginComponent
  */
 
-namespace App\Controller\Component;
+namespace AutoLogin\Controller\Component;
 
 use Cake\Controller\Component;
 
