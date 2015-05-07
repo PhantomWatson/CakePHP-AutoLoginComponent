@@ -1,6 +1,8 @@
 CakePHP AutoLogin Component
 ===========================
 
+[![Build Status](https://travis-ci.org/PhantomWatson/CakePHP-AutoLoginComponent.svg?branch=development)](https://travis-ci.org/PhantomWatson/CakePHP-AutoLoginComponent)
+
 This uses CakePHP's Cookie component in order to store a user's login data and automatically restore any sessions after they expire.
 
 Compatibility:
