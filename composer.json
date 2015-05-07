@@ -19,6 +19,10 @@
 	"require": {
 		"cakephp/cakephp": "3.0.*"
 	},
+	"require-dev" : {
+		"phpunit/phpunit": "*",
+		"cakephp/cakephp-codesniffer": "*"
+	},
 	"autoload": {
 		"psr-4": {
 			"AutoLogin\\": "src"
