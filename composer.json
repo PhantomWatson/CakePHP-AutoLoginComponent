@@ -17,7 +17,7 @@
 		"source": "https://github.com/PhantomWatson/CakePHP-AutoLoginComponent"
 	},
 	"require": {
-		"cakephp/cakephp": "3.0.*"
+		"cakephp/cakephp": "3.*"
 	},
 	"require-dev" : {
 		"phpunit/phpunit": "*",
