@@ -12,7 +12,7 @@ use Cake\Controller\Component;
 
 class AutoLoginComponent extends Component {
 
-    public $components = ['Cookie', 'Auth'];
+    public $components = ['Cookie'];
     public $request;
     public $settings = [];
     protected $_defaultConfig = [
@@ -30,7 +30,7 @@ class AutoLoginComponent extends Component {
     {
         parent::initialize([]);
         $this->configureCookie();
-        if ($this->config('autoLogin') == true && ! $this->Auth->user()) {
+        if ($this->config('autoLogin') == true && ! $this->_registry->getController()->Auth->user()) {
             $this->restoreLoginFromCookie();
         }
     }
@@ -60,11 +60,11 @@ class AutoLoginComponent extends Component {
         $controller = $this->_registry->getController();
         $tempRequest = $controller->request->data;
         $controller->request->data = $loginData;
-        $user = $this->Auth->identify();
+        $user = $controller->Auth->identify();
         $controller->request->data = $tempRequest;
 
         if ($user) {
-            $this->Auth->setUser($user);
+            $controller->Auth->setUser($user);
             return true;
         }
 
@@ -79,12 +79,12 @@ class AutoLoginComponent extends Component {
      */
     public function setCookie($data = [])
     {
+        $controller = $this->_registry->getController();
         if (empty($data)) {
-            $controller = $this->_registry->getController();
             $data = $controller->request->data;
         }
         if (empty($data)) {
-            $data = $this->Auth->user();
+            $data = $controller->Auth->user();
         }
         if (empty($data)) {
             return false;

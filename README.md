@@ -24,7 +24,7 @@ Installation:
 **Then:**
 
  - Add `Plugin::load('AutoLogin');` to your application's `bootstrap.php` (unless if you're already using `Plugin::loadAll();`)
- - Add `$this->loadComponent('AutoLogin.AutoLogin');` to `AppController::initialize()`
+ - Add `$this->loadComponent('AutoLogin.AutoLogin');` to `AppController::initialize()` after `$this->loadComponent('Auth')`
  - Add `$this->AutoLogin->setCookie();` after `$this->Auth->setUser($user);` wherever you log your users in
  - Add `$this->AutoLogin->destroyCookie();` where you log your users out (e.g. in `UsersController::logout()`)
 
